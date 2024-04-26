@@ -61,6 +61,7 @@ for i, image_path in enumerate(all_image_paths):
     segmented_image = draw_segmentation_map(outputs)
     
     final_image = image_overlay(image, segmented_image)
-    cv2.imshow('Segmented image', final_image)
-    cv2.waitKey(1)
+    #cv2.imshow('Segmented image', final_image)
+    #cv2.waitKey(1)
+    print(os.path.join(out_dir, image_path))
     cv2.imwrite(os.path.join(out_dir, image_path), final_image)
